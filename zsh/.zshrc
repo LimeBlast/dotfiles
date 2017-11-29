@@ -86,7 +86,7 @@ source $ZSH/oh-my-zsh.sh
 alias sshkey="pbcopy < ~/.ssh/id_rsa.pub && echo 'SSH key copied to clipboard' && say 'Copied to clipboard'"
 alias cat=ccat
 
-# iTerm2
+# iTerm 2
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
 # chruby
@@ -103,15 +103,9 @@ eval $(thefuck --alias)
 # pyenv
 export PYENV_ROOT=/usr/local/var/pyenv
 if which pyenv > /dev/null; then eval "$(pyenv init -)"; fi
+eval "$(pyenv virtualenv-init -)"
 
 
 source "/Users/Daniel/.oh-my-zsh/custom/themes/spaceship.zsh-theme"
 export PATH="/usr/local/opt/qt@5.5/bin:$PATH"
 export PATH="/usr/local/sbin:$PATH"
-
-# tabtab source for serverless package
-# uninstall by removing these lines or running `tabtab uninstall serverless`
-[[ -f /Users/Daniel/.nvm/versions/node/v7.1.0/lib/node_modules/serverless/node_modules/tabtab/.completions/serverless.zsh ]] && . /Users/Daniel/.nvm/versions/node/v7.1.0/lib/node_modules/serverless/node_modules/tabtab/.completions/serverless.zsh
-# tabtab source for sls package
-# uninstall by removing these lines or running `tabtab uninstall sls`
-[[ -f /Users/Daniel/.nvm/versions/node/v7.1.0/lib/node_modules/serverless/node_modules/tabtab/.completions/sls.zsh ]] && . /Users/Daniel/.nvm/versions/node/v7.1.0/lib/node_modules/serverless/node_modules/tabtab/.completions/sls.zsh
